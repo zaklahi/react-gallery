@@ -9,7 +9,7 @@ There is no database component to base mode. All data is stored in an array on t
 Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`.
 
 ```
-npm install
+npm installnpm s
 npm run server
 ```
 
