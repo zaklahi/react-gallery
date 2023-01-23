@@ -27,37 +27,40 @@ function App() {
       });
   }
 
-  useEffect( () => {
+const updateGallery = (id) => {
+  axios ({
+  method: 'PUT',
+  url: `./gallery/like/${id}`
+  })
+
+  .then((response) => {
+    console.log(response)
+    getGallery();
+})
+.catch((error) => {
+  console.log('Error in PUT updating', error);
+})
+
+};
+  
+
+useEffect( () => {
     getGallery();
   }, [])
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
   return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/>
         <img src="images/dark_sky.png"/>
-        <List galleryListProp = {galleryList}/>
+        <img src="images/ferris.png"/>
+        <img src="images/Kaaba.png"/>
+        <img src="images/mountain.webp"/> */}
+        <List galleryListProp = {galleryList}
+        updateGallery = {updateGallery}/>
       </div>
     );
 }
