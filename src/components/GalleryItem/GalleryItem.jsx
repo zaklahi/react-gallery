@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GalleryItem({pic}){
+function GalleryItem({pic, updateGallery}){
 const [itsSwapped, setIsSwapped] = useState(true);
 
     const togglePic = () => {
@@ -13,24 +13,39 @@ const [itsSwapped, setIsSwapped] = useState(true);
     const renderPic = () => {
         if (itsSwapped) {
             // need to return JSX
-            return <p>ON DUTY</p>;
+            return <img src={pic.path}></img>
+            
         } else {
             // need to return JSX
-            return <p>SLEEPING</p>;
+            return <p>{pic.description}/</p>;
         }
+    }
+
+    const addLike = () => {
+        updateGallery(pic.id)
+
     }
 
 return(
     <>
     
 <div>
-<h2>HIIII</h2>
+<h2></h2>
 
-{ renderPic()}
+{/* { renderPic()} */}
 
-<button onClick={renderPic}>Toggle Alias</button>
+{/* { !itsSwapped  &&
+                <p>Description: {pic.description}</p>
+            } */}
+<ul onClick={togglePic}>
+    {renderPic()}
+            
 
-<img src={pic.path}/>
+</ul>
+Likes: {pic.likes}
+<button onClick={addLike}></button>
+
+{/* <img src={pic.path}/> */}
 </div>
 
 </>

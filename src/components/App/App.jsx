@@ -47,18 +47,14 @@ const updateGallery = (id) => {
 useEffect( () => {
     getGallery();
   }, [])
-    
+  
+  
   return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        {/* <img src="images/goat_small.jpg"/>
-        <img src="images/dark_sky.png"/>
-        <img src="images/ferris.png"/>
-        <img src="images/Kaaba.png"/>
-        <img src="images/mountain.webp"/> */}
         <List galleryListProp = {galleryList}
         updateGallery = {updateGallery}/>
       </div>

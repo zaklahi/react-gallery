@@ -4,7 +4,7 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 function GalleryList({galleryListProp, updateGallery}) {
     return (
     <>
-    {JSON.stringify(galleryListProp)}
+   
     <div>
     {galleryListProp.map(pic => {
             
