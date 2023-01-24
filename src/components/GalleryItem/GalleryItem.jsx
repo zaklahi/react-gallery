@@ -31,30 +31,16 @@ return(
     
 <div>
 <h2></h2>
-
-{/* { renderPic()} */}
-
-{/* { !itsSwapped  &&
-                <p>Description: {pic.description}</p>
-            } */}
 <ul onClick={togglePic}>
     {renderPic()}
-            
-
 </ul>
-Likes: {pic.likes}
-<button onClick={addLike}></button>
+♡{pic.likes}
+<button onClick={addLike}>Like</button>
 
-{/* <img src={pic.path}/> */}
 </div>
 
 </>
 )
-
-
-
-
-
 
 }
 

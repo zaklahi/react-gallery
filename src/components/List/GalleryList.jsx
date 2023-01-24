@@ -21,5 +21,4 @@ function GalleryList({galleryListProp, updateGallery}) {
     
     }
 
-
 export default GalleryList;
